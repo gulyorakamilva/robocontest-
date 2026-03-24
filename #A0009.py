@@ -1,13 +1,9 @@
-N,K = map(float, input().split())
-print(float(K % N))
+m = list(map(int, input().split()))
+m.sort()
 
-#M106B
-a = int(input())
-b = int(input())
+# Minimum sum of 4 numbers: drop largest
+min_sum = sum(m[:4])
+# Maximum sum of 4 numbers: drop smallest
+max_sum = sum(m[1:])
 
-if a > b:
-    print(">")
-elif a < b:
-    print("<")
-else:
-    print("=")
+print(min_sum, max_sum)
